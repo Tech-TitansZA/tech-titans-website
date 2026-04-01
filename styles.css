@@ -1,0 +1,224 @@
+:root {
+  /* Core Palette - Dark Slate/Navy */
+  --bg: #02071b;
+  --bg-soft: #091436;
+  --panel: rgba(9, 20, 54, 0.76);
+  --line: rgba(255, 255, 255, 0.08);
+  
+  /* Brand Glows & Tech Colors */
+  --violet: #7a5fff;
+  --cyan: #1ed5ff;
+  --blue: #2a8dfc;
+  --ink: #ffffff;
+  --ink-soft: #b4bcd0;
+  
+  /* Mapping your "Titan" variables for compatibility */
+  --titan-blue: var(--blue);
+  --titan-border: var(--line);
+  --titan-navy: var(--bg-soft);
+  --titan-electric: var(--cyan);
+  --titan-glass: rgba(2, 7, 27, 0.85);
+
+  /* Transitions */
+  --t-fast: 0.2s ease;
+  --t-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ================== BASE & LAYOUT ================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg); /* Matches your darkest navy */
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ================== HEADER & NAVIGATION ================== */
+.site-header {
+  background: var(--titan-glass);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  transition: all 0.3s ease;
+}
+
+/* This triggers via JS when you scroll down */
+.site-header.scrolled {
+  height: 70px;
+  background: rgba(2, 7, 27, 0.98);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* --- LOGO REDUCTION FIX --- */
+.brand-logo {
+  height: 38px;      /* Reduced size for elegance */
+  width: auto;        
+  object-fit: contain;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.brand-mark:hover .brand-logo {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+/* Navigation Glow & Underline */
+.nav-btn {
+  position: relative;
+  overflow: hidden;
+  color: var(--ink-soft);
+  transition: var(--t-fast);
+}
+
+.nav-btn:hover {
+  color: var(--cyan);
+  text-shadow: 0 0 15px rgba(30, 213, 255, 0.5);
+}
+
+.nav-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--cyan);
+  box-shadow: 0 0 10px var(--cyan);
+  transition: var(--t-slow);
+  transform: translateX(-50%);
+}
+
+.nav-btn:hover::after {
+  width: 60%;
+}
+
+/* ================== PAGE & TRANSITIONS ================== */
+.page {
+  display: none !important;
+  opacity: 0;
+}
+
+.page.active {
+  display: block !important;
+  animation: titanFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  min-height: calc(100vh - 80px);
+}
+
+@keyframes titanFadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================== DYNAMIC COMPONENTS ================== */
+
+/* Service cards with dimming effect */
+.service-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.service-card:not(.open) {
+  opacity: 0.7;
+  filter: grayscale(0.3);
+}
+
+.service-card:hover {
+  opacity: 1;
+  filter: grayscale(0);
+  transform: translateY(-4px);
+  border-color: var(--blue);
+}
+
+/* Background Orbs */
+.bg-orb {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: -1;
+  opacity: 0.12;
+  pointer-events: none;
+  animation: float 25s infinite alternate;
+}
+
+.orb-a { background: var(--violet); top: -150px; right: -150px; }
+.orb-b { background: var(--blue); bottom: -150px; left: -150px; animation-delay: -5s; }
+
+@keyframes float {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(60px, 40px) scale(1.15); }
+}
+
+/* Toast (Command Center Style) */
+.toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  background: var(--bg-soft);
+  color: white;
+  border: 1px solid var(--cyan);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  animation: toastPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+/* Page handling */
+.page { display: none; }
+.page.active { display: block; }
+
+/* Accordion Handling */
+.card-body.open, .inline-body.open {
+    max-height: 500px !important;
+    opacity: 1 !important;
+    padding-bottom: 20px;
+}
+
+/* Smooth transition */
+.card-body, .inline-body {
+    transition: all 0.4s ease-in-out;
+}
+
+/* Simple animation for injected text */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn { animation: fadeIn 0.4s ease-out forwards; }
+
+#mobileMenu {
+    display: none; 
+    position: fixed !important; 
+    top: 6rem !important; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(100vh - 6rem); 
+    z-index: 9999 !important;
+    background: rgba(4, 14, 43, 0.98) !important;
+    backdrop-filter: blur(20px);
+    overflow-y: auto; 
+}
+
+/* 2. The active class */
+#mobileMenu.is-open {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.site-header {
+    overflow: visible !important; 
+}

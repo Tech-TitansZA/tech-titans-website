@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Tech Titans</title>
+    <meta name="description" content="Learn about Tech Titans, an 8-student technology organization." />
+    <link rel="icon" type="image/svg+xml" href="Public/TechTitans.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a" aria-hidden="true"></div>
+    <div class="bg-orb orb-b" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Tech Titans home">
+        <span class="brand-mark" aria-hidden="true">
+          <img class="brand-logo" src="Public/TechTitans.svg" alt="" />
+        </span>
+        <span class="brand-text">Tech Titans</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About</a>
+        <a href="focus.html">Focus</a>
+        <a href="projects.html">Projects</a>
+        <a href="connect.html">Connect</a>
+      </nav>
+    </header>
+
+    <main class="content-page">
+      <section class="panel reveal">
+        <p class="eyebrow">Who We Are</p>
+        <h1>We learn in public and build in teams.</h1>
+        <p>
+          Tech Titans is a student-led group focused on practical software development,
+          collaboration, and portfolio-quality outcomes. We are also focused on Cybersecurity,
+          Data Science, and Software Development. We combine classroom skills with project-based
+          execution from idea to release.
+        </p>
+      </section>
+
+      <section class="focus-grid reveal">
+        <article class="card">
+          <h3>Our Mission</h3>
+          <p>Build useful software and grow as responsible, job-ready engineers.</p>
+        </article>
+        <article class="card">
+          <h3>Our Method</h3>
+          <p>Plan clearly, ship often, and review code together every week.</p>
+        </article>
+        <article class="card">
+          <h3>Our Culture</h3>
+          <p>Curiosity, accountability, and respect for every teammate's growth path.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer reveal">
+      <p><span id="year"></span> Tech Titans. Built by students, for impact.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

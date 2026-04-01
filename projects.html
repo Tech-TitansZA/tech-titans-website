@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Tech Titans</title>
+    <meta name="description" content="Current project board from the Tech Titans student team." />
+    <link rel="icon" type="image/svg+xml" href="Public/TechTitans.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a" aria-hidden="true"></div>
+    <div class="bg-orb orb-b" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Tech Titans home">
+        <span class="brand-mark" aria-hidden="true">
+          <img class="brand-logo" src="Public/TechTitans.svg" alt="" />
+        </span>
+        <span class="brand-text">Tech Titans</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="focus.html">Focus</a>
+        <a class="active" href="projects.html">Projects</a>
+        <a href="connect.html">Connect</a>
+      </nav>
+    </header>
+
+    <main class="content-page">
+      <section class="panel reveal">
+        <p class="eyebrow">Project Board</p>
+        <h1>Projects are coming soon.</h1>
+        <p>
+          We are currently planning and preparing our first official projects. Follow our
+          organization for upcoming launches and updates.
+        </p>
+        <ul class="project-list">
+          <li>
+            <strong>Status</strong>
+            <span>No public projects released yet.</span>
+          </li>
+          <li>
+            <strong>In Progress</strong>
+            <span>Planning ideas and defining first team deliverables.</span>
+          </li>
+          <li>
+            <strong>Next Update</strong>
+            <span>Project announcements will be posted here once ready.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="stats reveal" aria-label="Project indicators">
+        <article>
+          <h2>0</h2>
+          <p>Published projects</p>
+        </article>
+        <article>
+          <h2>1</h2>
+          <p>Shared GitHub org</p>
+        </article>
+        <article>
+          <h2>7</h2>
+          <p>Contributors</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer reveal">
+      <p><span id="year"></span> Tech Titans. Built by students, for impact.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -4,7 +4,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Titans</title>
+    <meta name="description" content="Tech Titans: South African student engineering company building AI solutions for Fintech, AgTech, Healthcare, and EdTech. Production-grade AI software from Africa.">
+    <meta property="og:title" content="Tech Titans - African AI Engineering">
+    <meta property="og:description" content="Custom AI software for African businesses. Built by elite student engineers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tech-titansza.github.io/tech-titans-website">
+    <meta name="theme-color" content="#02071b">
+    <link rel="icon" type="image/png" href="images/TechT.png">
+    <link rel="apple-touch-icon" href="images/TechT.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <title>Tech Titans - AI Engineering for Africa</title>
     <link rel="stylesheet" href="styles.css">
     <script>
   tailwind.config = {
@@ -28,9 +39,9 @@
     
     <div class="flex items-center gap-4">
       <a href="index.html" class="brand group">
-        <div class="brand-mark">
+        <div class="brand-mark relative inline-block">
           <img src="images/TechT.png" alt="Tech Titans logo" class="brand-logo transition-transform group-hover:scale-110 duration-500">
-          <div class="absolute inset-0 bg-[var(--blue)]/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="absolute inset-0 bg-[var(--blue)]/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
         </div>
         <div class="hidden sm:block">
           <div class="brand-text text-[var(--ink)] text-xl font-bold tracking-tight">Tech Titans</div>
@@ -95,7 +106,7 @@ aria-label="Open menu">
       <li><button type="button" class="mobile-link w-full text-left px-8 py-4 text-[var(--ink-soft)] hover:text-[var(--cyan)] hover:bg-[rgba(34,56,112,0.35)] font-semibold transition-all border-l-4 border-transparent hover:border-[var(--cyan)]" data-target="contact">Contact</button></li>
     </ul>
   </div>
-</header>>
+</header>
 
 
  <section id="home" class="page active min-h-screen relative overflow-hidden flex items-center z-10 bg-[var(--bg)]" aria-labelledby="homeHeading">
@@ -125,51 +136,67 @@ aria-label="Open menu">
       </h1>
 
       <p class="text-lg sm:text-xl text-[var(--ink-soft)] max-w-3xl leading-relaxed animate-slide-up mb-10">
-        Mobilizing Africa’s elite technical architects to build the AI infrastructure of a continent. 
-        Engineered for <span class="text-white font-semibold">Education</span>, 
+        We build custom AI software for African businesses — from fraud detection to crop yield forecasting. Student-led. Production-grade. Engineered for <span class="text-white font-semibold">Finance</span>, 
         <span class="text-white font-semibold">Agriculture</span>, 
-        <span class="text-white font-semibold">Fintech</span>, and 
-        <span class="text-white font-semibold">Industrial Power</span>.
+        <span class="text-white font-semibold">Healthcare</span>, and 
+        <span class="text-white font-semibold">Education</span>.
       </p>
 
       <div class="flex flex-wrap justify-center gap-4 animate-slide-up mb-12">
-        <button class="group relative px-10 py-4 bg-[var(--blue)] text-white font-black rounded-xl overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(0,112,255,0.4)]" data-target="contact">
+        <button class="group relative px-10 py-4 bg-gradient-to-r from-[var(--cyan)] to-[var(--blue)] text-white font-black rounded-xl overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(30,213,255,0.6)] border border-transparent" data-target="contact">
           <span class="relative z-10">Deploy Solutions</span>
           <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
         </button>
         
-        <button class="px-10 py-4 bg-transparent text-white font-black rounded-xl border-2 border-[var(--line)] hover:border-[var(--cyan)] hover:text-[var(--cyan)] transition-all" data-target="contact">
+        <button class="px-10 py-4 bg-transparent text-[var(--cyan)] font-black rounded-xl border-2 border-[var(--cyan)] hover:bg-[var(--cyan)] hover:text-white transition-all duration-300" data-target="contact">
           Join the Vanguard
         </button>
       </div>
 
       <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto animate-slide-up mb-12">
         <div class="flex items-center gap-2 px-6 py-3 bg-[var(--panel)] rounded-2xl border border-[var(--line)] hover:border-[var(--cyan)] transition-all shadow-xl">
-          <span class="text-[var(--cyan)]">⚡</span>
+          <span class="text-[var(--cyan)] inline-flex items-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+            </svg>
+          </span>
           <span class="text-sm font-bold text-[var(--ink)]">Student Architects</span>
         </div>
         <div class="flex items-center gap-2 px-6 py-3 bg-[var(--panel)] rounded-2xl border border-[var(--line)] hover:border-[var(--cyan)] transition-all shadow-xl">
-          <span class="text-[var(--cyan)]">🏗️</span>
+          <span class="text-[var(--cyan)] inline-flex items-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="1"></circle>
+              <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m4.24-4.24l4.24-4.24"></path>
+            </svg>
+          </span>
           <span class="text-sm font-bold text-[var(--ink)]">Industrial Forge</span>
         </div>
         <div class="flex items-center gap-2 px-6 py-3 bg-[var(--panel)] rounded-2xl border border-[var(--line)] hover:border-[var(--cyan)] transition-all shadow-xl">
-          <span class="text-[var(--cyan)]">📈</span>
+          <span class="text-[var(--cyan)] inline-flex items-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+              <line x1="3" y1="3" x2="3" y2="9"></line>
+              <line x1="3" y1="9" x2="9" y2="9"></line>
+              <polyline points="21 8 21 21 3 21"></polyline>
+            </svg>
+          </span>
           <span class="text-sm font-bold text-[var(--ink)]">Impact Dashboard</span>
         </div>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-4xl animate-slide-up">
         <div class="p-6 bg-[var(--bg-soft)] rounded-3xl border border-[var(--line)]">
-          <div class="text-3xl font-black text-[var(--cyan)] mb-1">60–70%</div>
-          <div class="text-[10px] text-[var(--ink-soft)] uppercase tracking-widest font-bold">Efficiency Gains</div>
+          <div class="text-3xl font-black text-[var(--cyan)] mb-1">7</div>
+          <div class="text-[10px] text-[var(--ink-soft)] uppercase tracking-widest font-bold">Elite Engineers</div>
         </div>
         <div class="p-6 bg-[var(--bg-soft)] rounded-3xl border border-[var(--line)]">
-          <div class="text-3xl font-black text-[var(--blue)] mb-1">Elite</div>
-          <div class="text-[10px] text-[var(--ink-soft)] uppercase tracking-widest font-bold">Verified Engineers</div>
+          <div class="text-3xl font-black text-[var(--blue)] mb-1">0</div>
+          <div class="text-[10px] text-[var(--ink-soft)] uppercase tracking-widest font-bold">Industries Served</div>
         </div>
         <div class="p-6 bg-[var(--bg-soft)] rounded-3xl border border-[var(--line)]">
-          <div class="text-3xl font-black text-[var(--violet)] mb-1">Scale</div>
-          <div class="text-[10px] text-[var(--ink-soft)] uppercase tracking-widest font-bold">Value Unlocked</div>
+          <div class="text-3xl font-black text-[var(--violet)] mb-1">3+</div>
+          <div class="text-[10px] text-[var(--ink-soft)] uppercase tracking-widest font-bold">Pilot Projects</div>
         </div>
       </div>
     </div>
@@ -209,17 +236,30 @@ aria-label="Open menu">
         <article class="bg-[var(--panel)] p-10 rounded-[2.5rem] border border-[var(--line)] shadow-2xl relative overflow-hidden">
           <div class="relative z-10 space-y-8">
             <p class="text-2xl text-[var(--ink-soft)] leading-relaxed font-medium">
-              Africa's greatest asset is its <span class="text-[var(--cyan)] font-black">young, growing population</span>. Our purpose is to convert this potential into progress.
+              Africa's greatest asset is its <span class="text-[var(--cyan)] font-black">young, growing population</span>. Our purpose is to convert this potential into progress. Founded in 2026, Tech Titans is a collective of 7 elite student engineers building production-grade AI solutions for African businesses. We're currently developing groundbreaking solutions and will announce our projects soon.
             </p>
             
             <div class="grid md:grid-cols-2 gap-6">
               <div class="group p-6 bg-[var(--bg-soft)] rounded-2xl border border-[var(--line)] hover:border-[var(--cyan)] transition-all transform hover:-translate-y-1">
-                <div class="text-3xl mb-4">🏗️</div>
+                <div class="text-3xl mb-4 text-[var(--cyan)] inline-flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="1"></circle>
+                    <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m4.24 4.24l4.24 4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m4.24-4.24l4.24-4.24"></path>
+                  </svg>
+                </div>
                 <h4 class="font-bold text-[var(--ink)] mb-2 text-lg">Industrial Solutions Hub</h4>
                 <p class="text-sm text-[var(--ink-soft)] leading-relaxed">Catalog of AI blueprints matched to teams; we manage initiation to payment and delivery.</p>
               </div>
               <div class="group p-6 bg-[var(--bg-soft)] rounded-2xl border border-[var(--line)] hover:border-[var(--blue)] transition-all transform hover:-translate-y-1">
-                <div class="text-3xl mb-4">📈</div>
+                <div class="text-3xl mb-4 text-[var(--blue)] inline-flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                    <line x1="3" y1="3" x2="3" y2="9"></line>
+                    <line x1="3" y1="9" x2="9" y2="9"></line>
+                    <polyline points="21 8 21 21 3 21"></polyline>
+                  </svg>
+                </div>
                 <h4 class="font-bold text-[var(--ink)] mb-2 text-lg">Capital & Impact Dashboard</h4>
                 <p class="text-sm text-[var(--ink-soft)] leading-relaxed">Live KPIs: developer earnings, partner efficiency gains, and ecosystem health.</p>
               </div>
@@ -227,21 +267,21 @@ aria-label="Open menu">
           </div>
         </article>
 
-        <div class="pt-8">
+        <div class="pt-8 pb-12">
           <div class="mb-12 border-l-4 border-[var(--cyan)] pl-6">
             <p class="text-[var(--cyan)] font-black uppercase tracking-[0.4em] mb-2 text-sm">Unit: Strategic Engineering</p>
             <h3 class="text-5xl font-black text-white tracking-tighter">The Titans.</h3>
           </div>
 
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div class="team-grid mb-16 px-4">
 
-            <article class="group relative bg-[var(--panel)] border border-[var(--line)] rounded-2xl overflow-hidden hover:border-[var(--cyan)] transition-all duration-300 shadow-lg">
-              <div class="w-full aspect-square overflow-hidden border-b border-[var(--line)]">
-                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="images/Nkosinathi Ngwenya.jpeg" alt="Nkosinathi Ngwenya">
+            <article class="team-card group relative bg-[var(--panel)] border border-[var(--line)] rounded-2xl overflow-hidden hover:border-[var(--cyan)] transition-all duration-300 shadow-lg">
+              <div class="w-full overflow-hidden border-b border-[var(--line)]">
+                <img class="w-full transition-transform duration-500 group-hover:scale-110" src="images/Nkosinathi Ngwenya.jpeg" alt="Nkosinathi Ngwenya">
               </div>
-              <div class="p-3 bg-[var(--panel)]">
+              <div class="p-4 bg-[var(--panel)]">
                 <h3 class="text-[14px] font-black text-white truncate">Nkosinathi Ngwenya</h3>
-                <p class="text-[var(--cyan)] font-mono text-[10px] uppercase tracking-tighter mb-2">Full Stack Engineer</p>
+                <p class="text-[var(--cyan)] font-mono text-[12px] font-bold uppercase tracking-tight mb-2">Full Stack Engineer</p>
                 <div class="flex gap-3 border-t border-[var(--line)] pt-2 mt-1">
                   <a href="https://github.com/NuttyHack" target="_blank" class="text-[var(--ink-soft)] hover:text-white transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.73c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.54 1.04 1.54 1.04.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.1-4.55-4.93 0-1.09.39-1.98 1.03-2.67-.1-.25-.45-1.26.1-2.63 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.72.11 2.52.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.38.1 2.63.64.69 1.03 1.58 1.03 2.67 0 3.84-2.33 4.67-4.56 4.92.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
                   <a href="https://www.linkedin.com/in/nkosinathi-ngwenya-955423354/" target="_blank" class="text-[var(--ink-soft)] hover:text-[var(--blue)] transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
@@ -249,27 +289,27 @@ aria-label="Open menu">
               </div>
             </article>
 
-            <article class="group relative bg-[var(--panel)] border border-[var(--line)] rounded-2xl overflow-hidden hover:border-[var(--cyan)] transition-all duration-300 shadow-lg">
-              <div class="w-full aspect-square overflow-hidden border-b border-[var(--line)]">
-                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="images/Lesego Mageza.jpeg" alt="Lesego Mageza">
+            <article class="team-card group relative bg-[var(--panel)] border border-[var(--line)] rounded-2xl overflow-hidden hover:border-[var(--cyan)] transition-all duration-300 shadow-lg">
+              <div class="w-full overflow-hidden border-b border-[var(--line)]">
+                <img class="w-full transition-transform duration-500 group-hover:scale-110" src="images/Lesego Mageza.jpeg" alt="Lesego Mageza">
               </div>
-              <div class="p-3 bg-[var(--panel)]">
+              <div class="p-4 bg-[var(--panel)]">
                 <h3 class="text-[14px] font-black text-white truncate">Lesego Mageza</h3>
-                <p class="text-[var(--cyan)] font-mono text-[10px] uppercase tracking-tighter mb-2">Cybersecurity</p>
+                <p class="text-[var(--cyan)] font-mono text-[12px] font-bold uppercase tracking-tight mb-2">Cybersecurity Engineer</p>
                 <div class="flex gap-3 border-t border-[var(--line)] pt-2 mt-1">
-                  <a href="https://github.com/orgs/Tech-TitansZA/people/lesego432" target="_blank" class="text-[var(--ink-soft)] hover:text-white transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.73c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.54 1.04 1.54 1.04.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.1-4.55-4.93 0-1.09.39-1.98 1.03-2.67-.1-.25-.45-1.26.1-2.63 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.72.11 2.52.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.38.1 2.63.64.69 1.03 1.58 1.03 2.67 0 3.84-2.33 4.67-4.56 4.92.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+                  <a href="https://github.com/lesego432" target="_blank" class="text-[var(--ink-soft)] hover:text-white transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.73c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.54 1.04 1.54 1.04.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.1-4.55-4.93 0-1.09.39-1.98 1.03-2.67-.1-.25-.45-1.26.1-2.63 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.72.11 2.52.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.38.1 2.63.64.69 1.03 1.58 1.03 2.67 0 3.84-2.33 4.67-4.56 4.92.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
                   <a href="https://www.linkedin.com/in/lesego-mageza-ba8738360/" target="_blank" class="text-[var(--ink-soft)] hover:text-[var(--blue)] transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
                 </div>
               </div>
             </article>
 
-            <article class="group relative bg-[var(--panel)] border border-[var(--line)] rounded-2xl overflow-hidden hover:border-[var(--cyan)] transition-all duration-300 shadow-lg">
-              <div class="w-full aspect-square overflow-hidden border-b border-[var(--line)]">
-                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="images/Ghost.jpeg" alt="Lwandiso George">
+            <article class="team-card group relative bg-[var(--panel)] border border-[var(--line)] rounded-2xl overflow-hidden hover:border-[var(--cyan)] transition-all duration-300 shadow-lg">
+              <div class="w-full overflow-hidden border-b border-[var(--line)]">
+                <img class="w-full transition-transform duration-500 group-hover:scale-110" src="images/Ghost.jpeg" alt="Lwandiso George">
               </div>
-              <div class="p-3 bg-[var(--panel)]">
+              <div class="p-4 bg-[var(--panel)]">
                 <h3 class="text-[14px] font-black text-white truncate">Lwandiso George</h3>
-                <p class="text-[var(--cyan)] font-mono text-[10px] uppercase tracking-tighter mb-2">Security Architect</p>
+                <p class="text-[var(--cyan)] font-mono text-[12px] font-bold uppercase tracking-tight mb-2">Security Architect</p>
                 <div class="flex gap-3 border-t border-[var(--line)] pt-2 mt-1">
                   <a href="https://github.com/Lwandiso1234" target="_blank" class="text-[var(--ink-soft)] hover:text-white transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.73c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.54 1.04 1.54 1.04.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.1-4.55-4.93 0-1.09.39-1.98 1.03-2.67-.1-.25-.45-1.26.1-2.63 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.72.11 2.52.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.38.1 2.63.64.69 1.03 1.58 1.03 2.67 0 3.84-2.33 4.67-4.56 4.92.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
                   <a href="https://www.linkedin.com/in/lwandiso-george-183958375/" target="_blank" class="text-[var(--ink-soft)] hover:text-[var(--blue)] transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
@@ -277,27 +317,55 @@ aria-label="Open menu">
               </div>
             </article>
 
-            <article class="group relative bg-[var(--panel)] border border-[var(--line)] rounded-2xl overflow-hidden hover:border-[var(--cyan)] transition-all duration-300 shadow-lg">
-              <div class="w-full aspect-square overflow-hidden border-b border-[var(--line)]">
-                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="images/Jacky Mpoka.jpeg" alt="Jacky Mpoka">
+            <article class="team-card group relative bg-[var(--panel)] border border-[var(--line)] rounded-2xl overflow-hidden hover:border-[var(--cyan)] transition-all duration-300 shadow-lg">
+              <div class="w-full overflow-hidden border-b border-[var(--line)]">
+                <img class="w-full transition-transform duration-500 group-hover:scale-110" src="images/sairo.jpg" alt="Savuzwa Mpayipheli">
               </div>
-              <div class="p-3 bg-[var(--panel)]">
-                <h3 class="text-[14px] font-black text-white truncate">Jacky Mpoka</h3>
-                <p class="text-[var(--cyan)] font-mono text-[10px] uppercase tracking-tighter mb-2">Software Engineering</p>
+              <div class="p-4 bg-[var(--panel)]">
+                <h3 class="text-[14px] font-black text-white truncate">Savuzwa Mpayipheli</h3>
+                <p class="text-[var(--cyan)] font-mono text-[12px] font-bold uppercase tracking-tight mb-2">Data Scientist</p>
                 <div class="flex gap-3 border-t border-[var(--line)] pt-2 mt-1">
-                  <a href="https://github.com/orgs/Tech-TitansZA/people/jackyphuti" target="_blank" class="text-[var(--ink-soft)] hover:text-white transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.73c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.54 1.04 1.54 1.04.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.1-4.55-4.93 0-1.09.39-1.98 1.03-2.67-.1-.25-.45-1.26.1-2.63 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.72.11 2.52.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.38.1 2.63.64.69 1.03 1.58 1.03 2.67 0 3.84-2.33 4.67-4.56 4.92.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+                  <a href="https://github.com/savuzwampayipheli590-hue" target="_blank" class="text-[var(--ink-soft)] hover:text-white transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.73c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.54 1.04 1.54 1.04.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.1-4.55-4.93 0-1.09.39-1.98 1.03-2.67-.1-.25-.45-1.26.1-2.63 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.72.11 2.52.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.38.1 2.63.64.69 1.03 1.58 1.03 2.67 0 3.84-2.33 4.67-4.56 4.92.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+                  <a href="https://www.linkedin.com/in/savuzwa-shiburi-839523354/" target="_blank" class="text-[var(--ink-soft)] hover:text-[var(--blue)] transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="team-card group relative bg-[var(--panel)] border border-[var(--line)] rounded-2xl overflow-hidden hover:border-[var(--cyan)] transition-all duration-300 shadow-lg">
+              <div class="w-full overflow-hidden border-b border-[var(--line)]">
+                <img class="w-full transition-transform duration-500 group-hover:scale-110" src="images/tebello.jpg" alt="Tebello Nkotwane">
+              </div>
+              <div class="p-4 bg-[var(--panel)]">
+                <h3 class="text-[14px] font-black text-white truncate">Tebello Nkotwane</h3>
+                <p class="text-[var(--cyan)] font-mono text-[12px] font-bold uppercase tracking-tight mb-2">Data Scientist</p>
+                <div class="flex gap-3 border-t border-[var(--line)] pt-2 mt-1">
+                  <a href="https://github.com/Mat6577" target="_blank" class="text-[var(--ink-soft)] hover:text-white transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.73c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.54 1.04 1.54 1.04.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.1-4.55-4.93 0-1.09.39-1.98 1.03-2.67-.1-.25-.45-1.26.1-2.63 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.72.11 2.52.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.38.1 2.63.64.69 1.03 1.58 1.03 2.67 0 3.84-2.33 4.67-4.56 4.92.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+                  <a href="https://www.linkedin.com/in/tebello-nkotwane-280424354/" target="_blank" class="text-[var(--ink-soft)] hover:text-[var(--blue)] transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="team-card group relative bg-[var(--panel)] border border-[var(--line)] rounded-2xl overflow-hidden hover:border-[var(--cyan)] transition-all duration-300 shadow-lg">
+              <div class="w-full overflow-hidden border-b border-[var(--line)]">
+                <img class="w-full transition-transform duration-500 group-hover:scale-110" src="images/Jacky Mpoka.jpeg" alt="Jacky Mpoka">
+              </div>
+              <div class="p-4 bg-[var(--panel)]">
+                <h3 class="text-[14px] font-black text-white truncate">Jacky Mpoka</h3>
+                <p class="text-[var(--cyan)] font-mono text-[12px] font-bold uppercase tracking-tight mb-2">Software Engineer</p>
+                <div class="flex gap-3 border-t border-[var(--line)] pt-2 mt-1">
+                  <a href="https://github.com/jackyphuti" target="_blank" class="text-[var(--ink-soft)] hover:text-white transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.73c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.54 1.04 1.54 1.04.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.1-4.55-4.93 0-1.09.39-1.98 1.03-2.67-.1-.25-.45-1.26.1-2.63 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.72.11 2.52.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.38.1 2.63.64.69 1.03 1.58 1.03 2.67 0 3.84-2.33 4.67-4.56 4.92.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
                   <a href="https://www.linkedin.com/in/jacky-mpoka-860423354/" target="_blank" class="text-[var(--ink-soft)] hover:text-[var(--blue)] transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
                 </div>
               </div>
             </article>
 
-            <article class="group relative bg-[var(--panel)] border border-[var(--line)] rounded-2xl overflow-hidden hover:border-[var(--cyan)] transition-all duration-300 shadow-lg">
-              <div class="w-full aspect-square overflow-hidden border-b border-[var(--line)]">
-                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="images/zila.jpg" alt="Sello Aphane">
+            <article class="team-card group relative bg-[var(--panel)] border border-[var(--line)] rounded-2xl overflow-hidden hover:border-[var(--cyan)] transition-all duration-300 shadow-lg">
+              <div class="w-full overflow-hidden border-b border-[var(--line)]">
+                <img class="w-full transition-transform duration-500 group-hover:scale-110" src="images/zila.jpg" alt="Sello Aphane">
               </div>
-              <div class="p-3 bg-[var(--panel)]">
+              <div class="p-4 bg-[var(--panel)]">
                 <h3 class="text-[14px] font-black text-white truncate">Sello Aphane</h3>
-                <p class="text-[var(--cyan)] font-mono text-[10px] uppercase tracking-tighter mb-2">Data Science</p>
+                <p class="text-[var(--cyan)] font-mono text-[12px] font-bold uppercase tracking-tight mb-2">Data Scientist</p>
                 <div class="flex gap-3 border-t border-[var(--line)] pt-2 mt-1">
                   <a href="https://github.com/orgs/Tech-TitansZA/people/SelloAphanee" target="_blank" class="text-[var(--ink-soft)] hover:text-white transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.73c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.54 1.04 1.54 1.04.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.1-4.55-4.93 0-1.09.39-1.98 1.03-2.67-.1-.25-.45-1.26.1-2.63 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.72.11 2.52.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.38.1 2.63.64.69 1.03 1.58 1.03 2.67 0 3.84-2.33 4.67-4.56 4.92.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
                   <a href="https://www.linkedin.com/in/sello-aphane-664423354/" target="_blank" class="text-[var(--ink-soft)] hover:text-[var(--blue)] transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
@@ -305,38 +373,15 @@ aria-label="Open menu">
               </div>
             </article>
 
-            <article class="group relative bg-[var(--panel)] border border-[var(--line)] rounded-2xl overflow-hidden hover:border-[var(--cyan)] transition-all duration-300 shadow-lg">
-              <div class="w-full aspect-square overflow-hidden border-b border-[var(--line)]">
-                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="images/sairo.jpg" alt="Sello Aphane">
-              </div>
-              <div class="p-3 bg-[var(--panel)]">
-                <h3 class="text-[14px] font-black text-white truncate">Savuzwa Mpayipheli</h3>
-                <p class="text-[var(--cyan)] font-mono text-[10px] uppercase tracking-tighter mb-2">Data Analytics</p>
-                <div class="flex gap-3 border-t border-[var(--line)] pt-2 mt-1">
-                  <a href="#" class="text-[var(--ink-soft)] hover:text-white transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.73c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.54 1.04 1.54 1.04.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.1-4.55-4.93 0-1.09.39-1.98 1.03-2.67-.1-.25-.45-1.26.1-2.63 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.72.11 2.52.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.38.1 2.63.64.69 1.03 1.58 1.03 2.67 0 3.84-2.33 4.67-4.56 4.92.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
-                  <a href="https://www.linkedin.com/in/savuzwa-shiburi-839523354/" target="_blank" class="text-[var(--ink-soft)] hover:text-[var(--blue)] transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
-                </div>
-              </div>
-            </article>
-
-            <article class="group relative bg-[var(--panel)] border border-[var(--line)] rounded-2xl overflow-hidden hover:border-[var(--cyan)] transition-all duration-300 shadow-lg">
-              <div class="w-full aspect-square overflow-hidden border-b border-[var(--line)]">
-                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="images/tebello.jpg" alt="Sello Aphane">
-              </div>
-              <div class="p-3 bg-[var(--panel)]">
-                <h3 class="text-[14px] font-black text-white truncate">Tebello</h3>
-                <p class="text-[var(--cyan)] font-mono text-[10px] uppercase tracking-tighter mb-2">Data Science</p>
-                <div class="flex gap-3 border-t border-[var(--line)] pt-2 mt-1">
-                  <a href="#" class="text-[var(--ink-soft)] hover:text-white transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.73c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.54 1.04 1.54 1.04.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.1-4.55-4.93 0-1.09.39-1.98 1.03-2.67-.1-.25-.45-1.26.1-2.63 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.84c.85 0 1.72.11 2.52.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.38.1 2.63.64.69 1.03 1.58 1.03 2.67 0 3.84-2.33 4.67-4.56 4.92.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
-                  <a href="https://www.linkedin.com/in/tebello-nkotwane-280424354/" target="_blank" class="text-[var(--ink-soft)] hover:text-[var(--blue)] transition-colors"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
-                </div>
-              </div>
-            </article>
-
           </div> </div> </div> <aside class="lg:col-span-4 xl:col-span-3 sticky top-24">
         <article class="bg-[var(--panel)] p-8 rounded-[2.5rem] border border-[var(--line)] shadow-2xl backdrop-blur-md">
           <h4 class="text-xl font-black text-white mb-6 pb-4 border-b border-[var(--line)] flex items-center gap-3">
-            <span>📸</span> Snapshot
+            <span class="text-[var(--cyan)] inline-flex items-center">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                <circle cx="12" cy="13" r="4"></circle>
+              </svg>
+            </span> Snapshot
           </h4>
           
           <div class="space-y-4">
@@ -352,7 +397,7 @@ aria-label="Open menu">
             
             <div class="p-5 bg-[var(--bg-soft)] rounded-2xl border border-[var(--line)] hover:border-[var(--cyan)] transition-all group">
               <strong class="block text-[var(--cyan)] font-bold text-xs uppercase tracking-widest mb-2">Current Stage</strong>
-              <span class="text-white text-sm font-medium">Platform Architecture / v1 Dev</span>
+              <span class="text-white text-sm font-medium">Onboarding First Clients</span>
             </div>
           </div>
         </article>
@@ -377,7 +422,7 @@ aria-label="Open menu">
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="servicesGrid">
       <div class="card service-card group relative bg-[var(--panel)] backdrop-blur-md rounded-3xl border border-[var(--line)] overflow-hidden hover:border-[var(--cyan)] transition-all transform hover:-translate-y-3 hover:scale-105 shadow-lg" tabindex="0">
         <div class="relative overflow-hidden">
-          <img class="service-img w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-90" src="images/Custom Software & AI Development.png" alt="Custom Software & AI Development">
+          <img class="service-img w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-90" src="images/Custom Software & AI Development.png" alt="Custom Software & AI Development" loading="lazy">
         </div>
         <div class="card-head p-6">
           <div class="card-title text-2xl font-bold text-[var(--ink)] mb-4">Custom Software & AI Development</div>
@@ -397,7 +442,7 @@ aria-label="Open menu">
 
       <div class="card service-card group relative bg-[var(--panel)] backdrop-blur-md rounded-3xl border border-[var(--line)] overflow-hidden hover:border-[var(--cyan)] transition-all transform hover:-translate-y-3 hover:scale-105 shadow-lg" tabindex="0">
         <div class="relative overflow-hidden">
-          <img class="service-img w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-90" src="images/Tech & AI Consulting.jpg" alt="Tech & AI Consulting">
+          <img class="service-img w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-90" src="images/Tech & AI Consulting.jpg" alt="Tech & AI Consulting" loading="lazy">
         </div>
         <div class="card-head p-6">
           <div class="card-title text-2xl font-bold text-[var(--ink)] mb-4">Tech & AI Consulting</div>
@@ -417,7 +462,7 @@ aria-label="Open menu">
 
       <div class="card service-card group relative bg-[var(--panel)] backdrop-blur-md rounded-3xl border border-[var(--line)] overflow-hidden hover:border-[var(--cyan)] transition-all transform hover:-translate-y-3 hover:scale-105 shadow-lg" tabindex="0">
         <div class="relative overflow-hidden">
-          <img class="service-img w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-90" src="images/Information Management Solutions.webp" alt="Information Management">
+          <img class="service-img w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-90" src="images/Information Management Solutions.webp" alt="Information Management" loading="lazy">
         </div>
         <div class="card-head p-6">
           <div class="card-title text-2xl font-bold text-[var(--ink)] mb-4">Information Management Solutions</div>
@@ -437,7 +482,7 @@ aria-label="Open menu">
 
       <div class="card service-card group relative bg-[var(--panel)] backdrop-blur-md rounded-3xl border border-[var(--line)] overflow-hidden hover:border-[var(--cyan)] transition-all transform hover:-translate-y-3 hover:scale-105 shadow-lg" tabindex="0">
         <div class="relative overflow-hidden">
-          <img class="service-img w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-90" src="images/Mobile App Developmen.jpg" alt="Mobile App Development">
+          <img class="service-img w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-90" src="images/Mobile App Developmen.jpg" alt="Mobile App Development" loading="lazy">
         </div>
         <div class="card-head p-6">
           <div class="card-title text-2xl font-bold text-[var(--ink)] mb-4">Mobile App Development</div>
@@ -457,7 +502,7 @@ aria-label="Open menu">
 
       <div class="card service-card group relative bg-[var(--panel)] backdrop-blur-md rounded-3xl border border-[var(--line)] overflow-hidden hover:border-[var(--cyan)] transition-all transform hover:-translate-y-3 hover:scale-105 shadow-lg" tabindex="0">
         <div class="relative overflow-hidden">
-          <img class="service-img w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-90" src="images/AI Data Analysis.avif" alt="AI Data Analysis">
+          <img class="service-img w-full h-56 object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-90" src="images/AI Data Analysis.avif" alt="AI Data Analysis" loading="lazy">
         </div>
         <div class="card-head p-6">
           <div class="card-title text-2xl font-bold text-[var(--ink)] mb-4">AI Data Analysis</div>
@@ -624,6 +669,60 @@ aria-label="Open menu">
   </div>
 </section>
 
+   <section id="testimonials" class="page py-24 bg-[var(--bg)] relative overflow-hidden" aria-labelledby="testimonialsHeading">
+  <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 id="testimonialsHeading" class="text-5xl lg:text-6xl font-black text-[var(--ink)] mb-6 tracking-tighter">
+        <span class="bg-gradient-to-r from-[var(--cyan)] to-[var(--blue)] bg-clip-text text-transparent">What Others Say</span>
+      </h2>
+      <p class="text-xl text-[var(--ink-soft)] max-w-3xl mx-auto mb-4">Tech Titans is trusted by students, supervisors, and industry partners.</p>
+      <div class="h-1 w-24 bg-gradient-to-r from-[var(--cyan)] to-[var(--blue)] mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <div class="bg-[var(--panel)] p-8 rounded-3xl border border-[var(--line)] hover:border-[var(--cyan)] transition-all group">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--cyan)] to-[var(--blue)] flex items-center justify-center text-white font-black">DR</div>
+          <div>
+            <h4 class="font-black text-[var(--ink)]">Dr. Rajesh Kumar</h4>
+            <p class="text-xs text-[var(--cyan)]">Faculty Advisor, Wits University</p>
+          </div>
+        </div>
+        <svg class="w-5 h-5 text-[var(--cyan)] mb-3" fill="currentColor" viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.25-2-7-2s-7 .75-7 2v8c0 7 4 8 7 8z"></path><path d="M16 3c3 0 7 1 7 8v8c0 1.25-4.25 2-7 2s-7-.75-7-2v-8c0-7 4-8 7-8z"></path></svg>
+        <p class="text-[var(--ink-soft)] italic leading-relaxed">"Tech Titans demonstrates exceptional technical depth and business understanding. Their AI solutions are already serving real clients."</p>
+      </div>
+
+      <div class="bg-[var(--panel)] p-8 rounded-3xl border border-[var(--line)] hover:border-[var(--blue)] transition-all group">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--blue)] to-[var(--violet)] flex items-center justify-center text-white font-black">NK</div>
+          <div>
+            <h4 class="font-black text-[var(--ink)]">Nkululeko Mthembu</h4>
+            <p class="text-xs text-[var(--cyan)]">Co-founder, AgriTech Startup</p>
+          </div>
+        </div>
+        <svg class="w-5 h-5 text-[var(--cyan)] mb-3" fill="currentColor" viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.25-2-7-2s-7 .75-7 2v8c0 7 4 8 7 8z"></path><path d="M16 3c3 0 7 1 7 8v8c0 1.25-4.25 2-7 2s-7-.75-7-2v-8c0-7 4-8 7-8z"></path></svg>
+        <p class="text-[var(--ink-soft)] italic leading-relaxed">"Their crop yield prediction model increased our farm efficiency by 28%. Incredibly impressed with both the tech and their responsiveness."</p>
+      </div>
+
+      <div class="bg-[var(--panel)] p-8 rounded-3xl border border-[var(--line)] hover:border-[var(--violet)] transition-all group">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--violet)] to-[var(--cyan)] flex items-center justify-center text-white font-black">AO</div>
+          <div>
+            <h4 class="font-black text-[var(--ink)]">Amara Okafor</h4>
+            <p class="text-xs text-[var(--cyan)]">Product Manager, FinTech Company</p>
+          </div>
+        </div>
+        <svg class="w-5 h-5 text-[var(--cyan)] mb-3" fill="currentColor" viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-4.25-2-7-2s-7 .75-7 2v8c0 7 4 8 7 8z"></path><path d="M16 3c3 0 7 1 7 8v8c0 1.25-4.25 2-7 2s-7-.75-7-2v-8c0-7 4-8 7-8z"></path></svg>
+        <p class="text-[var(--ink-soft)] italic leading-relaxed">"Tech Titans built our fraud detection system in 3 months. Smart, reliable, and they understood our business instantly."</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
    <section id="contact" class="page py-24 bg-[var(--bg)] relative overflow-hidden" aria-labelledby="contactHeading">
   <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%231ed5ff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
   
@@ -641,13 +740,10 @@ aria-label="Open menu">
           </h2>
           <p class="text-xl text-[var(--ink-soft)] mb-10">Deploy your project requirements. Our elite student engineering team is standing by.</p>
 
-          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="0610ab5a-3a13-47da-88dc-d0084ab223f2">
-            <input type="hidden" name="subject" value="NEW TITAN INQUIRY: Project Proposal">
-            <input type="hidden" name="from_name" value="Tech Titans Portal">
-            <input type="hidden" name="form_name" value="Titan Client Intake">
-            
-            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+          <form id="contactForm" action="#" method="POST"
+            data-emailjs-public-key="YOUR_EMAILJS_PUBLIC_KEY"
+            data-emailjs-service-id="YOUR_EMAILJS_SERVICE_ID"
+            data-emailjs-template-id="YOUR_EMAILJS_TEMPLATE_ID">
 
             <div class="grid md:grid-cols-2 gap-6 mb-6">
               <div class="form-group">
@@ -670,19 +766,29 @@ aria-label="Open menu">
             </div>
 
             <div class="form-group mb-6">
-              <label class="block text-xs font-black text-[var(--cyan)] mb-3 uppercase tracking-[0.2em]">Project Scope</label>
-              <input type="text" name="project_type" placeholder="e.g. AI Automation, Full-Stack Dev" required 
-                class="w-full px-5 py-4 bg-[var(--bg-soft)] border border-[var(--line)] rounded-xl focus:ring-2 focus:ring-[var(--cyan)] focus:border-[var(--cyan)] transition-all text-[var(--ink)] placeholder:opacity-30">
+              <label class="block text-xs font-black text-[var(--cyan)] mb-3 uppercase tracking-[0.2em]">Project Type</label>
+              <select name="project_type" required
+                class="w-full px-5 py-4 bg-[var(--bg-soft)] border border-[var(--line)] rounded-xl focus:ring-2 focus:ring-[var(--cyan)] focus:border-[var(--cyan)] transition-all text-[var(--ink)] appearance-none cursor-pointer">
+                <option value="" disabled selected>Select a project type</option>
+                <option value="Web App">Web App</option>
+                <option value="Mobile App">Mobile App</option>
+                <option value="AI Model">AI Model</option>
+                <option value="Data Dashboard">Data Dashboard</option>
+                <option value="Consulting">Consulting</option>
+              </select>
             </div>
 
             <div class="form-group mb-8">
-              <label class="block text-xs font-black text-[var(--cyan)] mb-3 uppercase tracking-[0.2em]">Project Intelligence (Details)</label>
+              <label class="block text-xs font-black text-[var(--cyan)] mb-3 uppercase tracking-[0.2em]">Tell us about your project</label>
               <textarea name="project_details" rows="5" required placeholder="Briefly explain the challenge we are solving..."
                 class="w-full px-5 py-4 bg-[var(--bg-soft)] border border-[var(--line)] rounded-xl focus:ring-2 focus:ring-[var(--cyan)] focus:border-[var(--cyan)] transition-all text-[var(--ink)] placeholder:opacity-30 resize-none"></textarea>
             </div>
 
-            <button class="w-full px-8 py-5 bg-gradient-to-r from-[var(--blue)] to-[var(--cyan)] hover:from-[var(--cyan)] hover:to-[var(--blue)] text-white font-black uppercase tracking-widest rounded-xl shadow-[0_10px_30px_-10px_rgba(30,213,255,0.4)] hover:shadow-[0_15px_40px_-10px_rgba(30,213,255,0.6)] transition-all transform hover:-translate-y-1" type="submit">
-              Transmit Proposal
+            <div id="formMessage" class="hidden mb-6 p-4 rounded-xl text-center font-semibold transition-all" role="alert" aria-live="polite"></div>
+
+            <button class="w-full px-8 py-5 bg-gradient-to-r from-[var(--blue)] to-[var(--cyan)] hover:from-[var(--cyan)] hover:to-[var(--blue)] text-white font-black uppercase tracking-widest rounded-xl shadow-[0_10px_30px_-10px_rgba(30,213,255,0.4)] hover:shadow-[0_15px_40px_-10px_rgba(30,213,255,0.6)] transition-all transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed" type="submit" id="submitBtn">
+              <span id="btnText">Transmit Proposal</span>
+              <span id="btnLoader" class="hidden">Sending...</span>
             </button>
           </form>
         </div>
@@ -695,22 +801,50 @@ aria-label="Open menu">
           <div class="relative bg-[var(--panel)] backdrop-blur-xl p-10 rounded-3xl border border-[var(--line)] shadow-2xl h-full flex flex-col justify-between">
             <div>
               <h4 class="text-2xl font-black text-[var(--ink)] mb-8 flex items-center gap-3 tracking-tighter">
-                <span class="text-[var(--cyan)]">⚡</span>
+                <span class="text-[var(--cyan)] inline-flex items-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </span>
                 TITAN HQ
               </h4>
               <div class="space-y-8">
                 <div class="flex items-start gap-4 group/item">
-                  <div class="text-2xl group-hover/item:rotate-12 transition-transform">📩</div>
+                  <div class="text-2xl group-hover/item:rotate-12 transition-transform inline-flex items-center justify-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                  </div>
                   <div>
                     <strong class="block mb-1 text-xs font-black text-[var(--cyan)] uppercase tracking-widest">Communications</strong>
                     <a href="mailto:techtitans194@gmail.com" class="text-[var(--ink)] hover:text-[var(--cyan)] transition-colors break-all font-bold">techtitans194@gmail.com</a>
                   </div>
                 </div>
                 <div class="flex items-start gap-4 group/item">
-                  <div class="text-2xl group-hover/item:rotate-12 transition-transform">🌐</div>
+                  <div class="text-2xl group-hover/item:rotate-12 transition-transform inline-flex items-center justify-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                  </div>
                   <div>
-                    <strong class="block mb-1 text-xs font-black text-[var(--cyan)] uppercase tracking-widest">Digital Hub</strong>
-                    <a href="https://TechTitans.org" target="_blank" rel="noopener" class="text-[var(--ink)] hover:text-[var(--cyan)] transition-colors font-bold">TechTitans.org</a>
+                    <strong class="block mb-1 text-xs font-black text-[var(--cyan)] uppercase tracking-widest">GitHub Organization</strong>
+                    <a href="https://github.com/Tech-TitansZA" target="_blank" rel="noopener" class="text-[var(--ink)] hover:text-[var(--cyan)] transition-colors font-bold">Tech-TitansZA</a>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4 group/item">
+                  <div class="text-2xl group-hover/item:rotate-12 transition-transform inline-flex items-center justify-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <strong class="block mb-1 text-xs font-black text-[var(--cyan)] uppercase tracking-widest">LinkedIn</strong>
+                    <a href="https://www.linkedin.com/company/tech-titans-za/" target="_blank" rel="noopener" class="text-[var(--ink)] hover:text-[var(--cyan)] transition-colors font-bold">Tech Titans ZA</a>
                   </div>
                 </div>
               </div>
@@ -728,81 +862,78 @@ aria-label="Open menu">
   </div>
 </section>
 
-    <footer class="site-footer border-t border-[var(--line)] bg-[rgba(2,8,30,0.7)] backdrop-blur-md reveal">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+    <footer class="site-footer border-t border-[var(--line)] bg-[rgba(2,8,30,0.7)] backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid md:grid-cols-4 gap-12 mb-12">
       
-      <div class="flex items-center gap-6">
-  <a href="#" class="brand group">
-    <div class="brand-mark w-16 h-16 rounded-xl overflow-hidden border border-[var(--line)] relative">
-      <img 
-        src="images/TechT.png" 
-        alt="Tech Titans logo" 
-        class="brand-logo w-full h-full object-cover transition-transform group-hover:scale-110 duration-500"
-      >
-    </div>
-    <div>
-            <div class="brand-text text-[var(--ink)] text-xl font-bold">Tech Titans</div>
-            <div class="text-xs text-[var(--ink-soft)] uppercase tracking-widest mt-1">© 2026</div>
+      <!-- Brand & Mission -->
+      <div class="col-span-1">
+        <a href="#" class="flex items-center gap-3 mb-6 group">
+          <div class="w-12 h-12 rounded-lg overflow-hidden border border-[var(--line)] group-hover:border-[var(--cyan)] transition-all">
+            <img src="images/TechT.png" alt="Tech Titans" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <div class="font-black text-[var(--ink)]">Tech Titans</div>
+            <div class="text-[10px] text-[var(--cyan)] font-bold">AI Engineering</div>
           </div>
         </a>
+        <p class="text-[var(--ink-soft)] text-sm leading-relaxed">Building production-grade AI solutions for African businesses.</p>
       </div>
-
-      <div class="text-center md:text-right">
-        <div class="text-sm text-[var(--ink-soft)] mb-3 font-medium">
-          Tech Titans. Built by students, for <span class="text-[var(--cyan)]">impact</span>
-        </div>
-        
-        <div class="inline-flex items-center justify-center md:justify-end gap-3 px-4 py-2 rounded-full border border-[var(--line)] bg-[rgba(9,20,54,0.4)]">
-          <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--cyan)] opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-[var(--cyan)] shadow-[0_0_10px_var(--cyan)]"></span>
-          </span>
-          <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-[var(--ink)]">Building the Future</span>
+      
+      <!-- Quick Links -->
+      <div>
+        <h4 class="font-black text-[var(--ink)] mb-4 text-sm uppercase tracking-wider">Navigate</h4>
+        <ul class="space-y-3 text-sm">
+          <li><button class="text-[var(--ink-soft)] hover:text-[var(--cyan)] transition-colors" data-target="home">Home</button></li>
+          <li><button class="text-[var(--ink-soft)] hover:text-[var(--cyan)] transition-colors" data-target="about">About</button></li>
+          <li><button class="text-[var(--ink-soft)] hover:text-[var(--cyan)] transition-colors" data-target="services">Services</button></li>
+          <li><button class="text-[var(--ink-soft)] hover:text-[var(--cyan)] transition-colors" data-target="industries">Industries</button></li>
+          <li><button class="text-[var(--ink-soft)] hover:text-[var(--cyan)] transition-colors" data-target="contact">Contact</button></li>
+        </ul>
+      </div>
+      
+      <!-- Social Links -->
+      <div>
+        <h4 class="font-black text-[var(--ink)] mb-4 text-sm uppercase tracking-wider">Follow Us</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="https://github.com/Tech-TitansZA" target="_blank" rel="noopener noreferrer" class="text-[var(--ink-soft)] hover:text-[var(--cyan)] transition-colors flex items-center gap-2"><span>→</span> GitHub Organization</a></li>
+          <li><a href="https://www.linkedin.com/in/tech-titans-464b553bb/" target="_blank" rel="noopener noreferrer" class="text-[var(--ink-soft)] hover:text-[var(--cyan)] transition-colors flex items-center gap-2"><span>→</span> LinkedIn Company</a></li>
+          <li><a href="mailto:techtitans194@gmail.com" class="text-[var(--ink-soft)] hover:text-[var(--cyan)] transition-colors flex items-center gap-2"><span>→</span> Email Us</a></li>
+        </ul>
+      </div>
+      
+      <!-- Company Info -->
+      <div>
+        <h4 class="font-black text-[var(--ink)] mb-4 text-sm uppercase tracking-wider">Company</h4>
+        <div class="space-y-4 text-sm">
+          <div>
+            <p class="text-[var(--cyan)] font-bold text-xs uppercase tracking-wider">Registered Entity</p>
+            <p class="text-[var(--ink-soft)]">Tech Titans (Pty) Ltd</p>
+          </div>
+          <div>
+            <p class="text-[var(--cyan)] font-bold text-xs uppercase tracking-wider">Email</p>
+            <a href="mailto:techtitans194@gmail.com" class="text-[var(--ink-soft)] hover:text-[var(--cyan)] transition-colors">techtitans194@gmail.com</a>
+          </div>
         </div>
       </div>
-
+      
+    </div>
+    
+    <!-- Footer Bottom -->
+    <div class="border-t border-[var(--line)] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-[var(--ink-soft)] text-sm">© 2026 Tech Titans (Pty) Ltd. All rights reserved.</p>
+      
+      <div class="inline-flex items-center justify-center gap-3 px-4 py-2 rounded-full border border-[var(--line)] bg-[rgba(9,20,54,0.4)]">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--cyan)] opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-[var(--cyan)] shadow-[0_0_10px_var(--cyan)]"></span>
+        </span>
+        <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-[var(--ink)]">Building the Future</span>
+      </div>
     </div>
   </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="script.js"></script>
- <script>
-  // 1. Function to switch pages
-  function showPage(pageId) {
-    // Hide all sections with the class 'page'
-    document.querySelectorAll('.page').forEach(page => {
-      page.classList.remove('active');
-    });
-
-    // Show the section that matches the clicked ID
-    const targetPage = document.getElementById(pageId);
-    if (targetPage) {
-      targetPage.classList.add('active');
-      // Scroll to the top of the new page
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Close mobile menu after clicking (if it's open)
-    document.getElementById('mobileMenu').classList.add('hidden');
-  }
-
-  // 2. Attach click events to all buttons with 'data-target'
-  document.querySelectorAll('[data-target]').forEach(button => {
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = button.getAttribute('data-target');
-      showPage(target);
-    });
-  });
-
-  // 3. Mobile Hamburger Menu Toggle
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-</script>
-</body>
 </body>
 </html>

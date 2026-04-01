@@ -6,12 +6,18 @@ if (menuToggle && siteNav) {
   const closeMenu = () => {
     siteNav.classList.remove("open");
     menuToggle.setAttribute("aria-expanded", "false");
+    siteNav.setAttribute("aria-hidden", "true");
     document.body.classList.remove("nav-open");
   };
 
-  menuToggle.addEventListener("click", () => {
+  siteNav.setAttribute("aria-hidden", "true");
+
+  menuToggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
     const isOpen = siteNav.classList.toggle("open");
     menuToggle.setAttribute("aria-expanded", String(isOpen));
+    siteNav.setAttribute("aria-hidden", String(!isOpen));
     document.body.classList.toggle("nav-open", isOpen);
   });
 

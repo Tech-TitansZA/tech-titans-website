@@ -585,6 +585,7 @@ h1 span {
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 65;
     width: min(78vw, 280px);
     height: 100dvh;
     padding: 4.8rem 1rem 1rem;
@@ -595,6 +596,8 @@ h1 span {
     flex-direction: column;
     align-items: flex-start;
     display: flex;
+    visibility: hidden;
+    pointer-events: none;
     transform: translateX(110%);
     transition: transform 240ms ease;
   }
@@ -606,6 +609,8 @@ h1 span {
   }
 
   .site-nav.open {
+    visibility: visible;
+    pointer-events: auto;
     transform: translateX(0);
   }
 

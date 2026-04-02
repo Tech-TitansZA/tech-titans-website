@@ -44,7 +44,7 @@
           <div class="absolute inset-0 bg-[var(--blue)]/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
         </div>
         <div class="hidden sm:block">
-          <div class="brand-text text-[var(--ink)] text-xl font-bold tracking-tight">Tech Titans</div>
+          <div class="brand-text text-[var(--ink)] text-xl font-bold tracking-tight"><span class="logo-letter">T</span>ech Titans</div>
           <div class="text-[10px] text-[var(--cyan)] font-bold tracking-[0.2em] uppercase leading-none mt-1">Student Builders</div>
         </div>
       </a>
@@ -53,31 +53,31 @@
     <nav class="hidden lg:flex items-center gap-1" role="navigation" aria-label="Primary">
       <ul class="flex items-center gap-2 list-none m-0 p-0">
         <li>
-          <button class="nav-btn group relative px-5 py-2.5 text-sm font-semibold text-[var(--ink-soft)] hover:text-[var(--ink)] transition-all rounded-lg" data-target="home">
+          <button class="nav-btn nav-link group relative px-5 py-2.5 text-sm font-semibold text-[var(--ink-soft)] hover:text-[var(--ink)] transition-all rounded-lg" data-target="home">
             <span class="relative z-10">Home</span>
             <span class="absolute inset-0 bg-[var(--blue)]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity border border-[var(--line)]"></span>
           </button>
         </li>
         <li>
-          <button class="nav-btn group relative px-5 py-2.5 text-sm font-semibold text-[var(--ink-soft)] hover:text-[var(--ink)] transition-all rounded-lg" data-target="about">
+          <button class="nav-btn nav-link group relative px-5 py-2.5 text-sm font-semibold text-[var(--ink-soft)] hover:text-[var(--ink)] transition-all rounded-lg" data-target="about">
             <span class="relative z-10">About</span>
             <span class="absolute inset-0 bg-[var(--blue)]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity border border-[var(--line)]"></span>
           </button>
         </li>
         <li>
-          <button class="nav-btn group relative px-5 py-2.5 text-sm font-semibold text-[var(--ink-soft)] hover:text-[var(--ink)] transition-all rounded-lg" data-target="services">
+          <button class="nav-btn nav-link group relative px-5 py-2.5 text-sm font-semibold text-[var(--ink-soft)] hover:text-[var(--ink)] transition-all rounded-lg" data-target="services">
             <span class="relative z-10">Services</span>
             <span class="absolute inset-0 bg-[var(--blue)]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity border border-[var(--line)]"></span>
           </button>
         </li>
         <li>
-          <button class="nav-btn group relative px-5 py-2.5 text-sm font-semibold text-[var(--ink-soft)] hover:text-[var(--ink)] transition-all rounded-lg" data-target="industries">
+          <button class="nav-btn nav-link group relative px-5 py-2.5 text-sm font-semibold text-[var(--ink-soft)] hover:text-[var(--ink)] transition-all rounded-lg" data-target="industries">
             <span class="relative z-10">Industries</span>
             <span class="absolute inset-0 bg-[var(--blue)]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity border border-[var(--line)]"></span>
           </button>
         </li>
         <li>
-          <button class="nav-btn group relative px-5 py-2.5 text-sm font-semibold text-[var(--ink-soft)] hover:text-[var(--ink)] transition-all rounded-lg" data-target="contact">
+          <button class="nav-btn nav-link group relative px-5 py-2.5 text-sm font-semibold text-[var(--ink-soft)] hover:text-[var(--ink)] transition-all rounded-lg" data-target="contact">
             <span class="relative z-10">Contact</span>
             <span class="absolute inset-0 bg-[var(--blue)]/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity border border-[var(--line)]"></span>
           </button>
@@ -123,7 +123,7 @@ aria-label="Open menu">
   <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
     <div class="flex flex-col items-center text-center">
       
-      <div class="inline-flex items-center gap-2 px-4 py-2 bg-[var(--bg-soft)] rounded-full border border-[var(--line)] hover:border-[var(--cyan)] transition-colors animate-slide-up mb-6">
+      <div class="hero-badge inline-flex items-center gap-2 px-4 py-2 bg-[var(--bg-soft)] rounded-full border border-[var(--line)] hover:border-[var(--cyan)] transition-colors animate-slide-up mb-6">
         <span class="w-2 h-2 bg-[var(--cyan)] rounded-full animate-pulse shadow-[0_0_8px_var(--cyan)]"></span>
         <span class="text-xs font-bold text-[var(--cyan)] tracking-[0.2em] uppercase">The African Forge</span>
       </div>
@@ -136,14 +136,12 @@ aria-label="Open menu">
       </h1>
 
       <p class="text-lg sm:text-xl text-[var(--ink-soft)] max-w-3xl leading-relaxed animate-slide-up mb-10">
-        We build custom AI software for African businesses — from fraud detection to crop yield forecasting. Student-led. Production-grade. Engineered for <span class="text-white font-semibold">Finance</span>, 
-        <span class="text-white font-semibold">Agriculture</span>, 
-        <span class="text-white font-semibold">Healthcare</span>, and 
-        <span class="text-white font-semibold">Education</span>.
+        We build custom AI software for African businesses — from fraud detection to crop yield forecasting. Student-led. Production-grade. Engineered for
+        <span class="typewrap"><span id="heroTypewriter" class="text-white font-semibold"></span><span class="type-cursor">|</span></span>.
       </p>
 
       <div class="flex flex-wrap justify-center gap-4 animate-slide-up mb-12">
-        <button class="group relative px-10 py-4 bg-gradient-to-r from-[var(--cyan)] to-[var(--blue)] text-white font-black rounded-xl overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(30,213,255,0.6)] border border-transparent" data-target="contact">
+        <button class="btn-primary group relative px-10 py-4 bg-gradient-to-r from-[var(--cyan)] to-[var(--blue)] text-white font-black rounded-xl overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(30,213,255,0.6)] border border-transparent" data-target="contact">
           <span class="relative z-10">Deploy Solutions</span>
           <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer"></div>
         </button>
@@ -188,15 +186,15 @@ aria-label="Open menu">
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-4xl animate-slide-up">
         <div class="p-6 bg-[var(--bg-soft)] rounded-3xl border border-[var(--line)]">
           <div class="text-3xl font-black text-[var(--cyan)] mb-1">7</div>
-          <div class="text-[10px] text-[var(--ink-soft)] uppercase tracking-widest font-bold">Elite Engineers</div>
+          <div class="text-[10px] text-[var(--ink-soft)] uppercase tracking-widest font-bold"><span class="elite-word">Elite</span> Engineers</div>
         </div>
         <div class="p-6 bg-[var(--bg-soft)] rounded-3xl border border-[var(--line)]">
           <div class="text-3xl font-black text-[var(--blue)] mb-1">0</div>
           <div class="text-[10px] text-[var(--ink-soft)] uppercase tracking-widest font-bold">Industries Served</div>
         </div>
         <div class="p-6 bg-[var(--bg-soft)] rounded-3xl border border-[var(--line)]">
-          <div class="text-3xl font-black text-[var(--violet)] mb-1">3+</div>
-          <div class="text-[10px] text-[var(--ink-soft)] uppercase tracking-widest font-bold">Pilot Projects</div>
+          <div class="text-3xl font-black text-[var(--violet)] mb-1" data-count-target="65" data-count-display="60-70">60-70</div>
+          <div class="text-[10px] text-[var(--ink-soft)] uppercase tracking-widest font-bold">Build Sprint / Week</div>
         </div>
       </div>
     </div>
@@ -208,6 +206,21 @@ aria-label="Open menu">
     </div>
   </div>
 </section>
+
+<div class="marquee-wrap">
+  <div class="marquee-track" aria-hidden="true">
+    <span class="marquee-item">AI Engineering</span>
+    <span class="marquee-item">Data Intelligence</span>
+    <span class="marquee-item">Automation Systems</span>
+    <span class="marquee-item">Student-Led Innovation</span>
+    <span class="marquee-item">African Scale</span>
+    <span class="marquee-item">AI Engineering</span>
+    <span class="marquee-item">Data Intelligence</span>
+    <span class="marquee-item">Automation Systems</span>
+    <span class="marquee-item">Student-Led Innovation</span>
+    <span class="marquee-item">African Scale</span>
+  </div>
+</div>
 
   <!-- Scroll Indicator -->
   <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -933,6 +946,23 @@ aria-label="Open menu">
     </div>
   </div>
 </footer>
+
+<button type="button" id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+<div id="industryModal" class="industry-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="industryModalTitle">
+  <div class="industry-modal-card p-6 md:p-8">
+    <div class="flex items-start justify-between gap-4 mb-5">
+      <h3 id="industryModalTitle" class="text-2xl font-black text-white tracking-tight">Industry</h3>
+      <button type="button" id="industryModalClose" class="px-3 py-2 rounded-lg border border-white/20 hover:bg-white/10 text-white">Close</button>
+    </div>
+    <div id="industryModalBody" class="space-y-5 text-[var(--ink-soft)]"></div>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <button type="button" id="industryModalContact" class="btn-primary px-5 py-3 rounded-xl bg-gradient-to-r from-[var(--cyan)] to-[var(--blue)] text-white font-bold">Request Proposal</button>
+      <button type="button" id="industryModalDismiss" class="px-5 py-3 rounded-xl border border-white/20 text-white hover:bg-white/10">Dismiss</button>
+    </div>
+  </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="script.js"></script>
 </body>

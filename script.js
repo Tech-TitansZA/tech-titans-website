@@ -1,5 +1,102 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("🚀 Titan Script Initialized...");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    document.querySelectorAll('.page').forEach(section => section.classList.add('section-shell'));
+
+    function initTypewriter() {
+        const target = document.getElementById('heroTypewriter');
+        if (!target || target.dataset.started === 'true') return;
+
+        const words = ['Finance', 'Agriculture', 'Healthcare', 'Education'];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+
+        target.dataset.started = 'true';
+        if (prefersReducedMotion) {
+            target.textContent = words.join(' • ');
+            return;
+        }
+
+        const tick = () => {
+            const word = words[wordIndex];
+            if (!deleting) {
+                charIndex += 1;
+                target.textContent = word.slice(0, charIndex);
+                if (charIndex === word.length) {
+                    deleting = true;
+                    setTimeout(tick, 1100);
+                    return;
+                }
+            } else {
+                charIndex -= 1;
+                target.textContent = word.slice(0, charIndex);
+                if (charIndex === 0) {
+                    deleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                }
+            }
+            setTimeout(tick, deleting ? 55 : 85);
+        };
+
+        tick();
+    }
+
+    function animateCounters() {
+        document.querySelectorAll('[data-count-target]').forEach(el => {
+            if (el.dataset.countDone === 'true') return;
+            const target = Number(el.dataset.countTarget || '0');
+            const finalDisplay = el.dataset.countDisplay || String(target);
+            if (!Number.isFinite(target)) return;
+
+            if (prefersReducedMotion) {
+                el.textContent = finalDisplay;
+                el.dataset.countDone = 'true';
+                return;
+            }
+
+            const start = performance.now();
+            const duration = 1100;
+            const step = (now) => {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = Math.round(target * eased);
+                el.textContent = String(current);
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                } else {
+                    el.textContent = finalDisplay;
+                    el.dataset.countDone = 'true';
+                }
+            };
+
+            requestAnimationFrame(step);
+        });
+    }
+
+    function initRevealObserver() {
+        const revealNodes = document.querySelectorAll('.service-card, .team-card, .industry-card, #about h2, #services h2, #industries h2, #contact h2');
+        revealNodes.forEach((node, index) => {
+            node.setAttribute('data-reveal', '');
+            node.style.setProperty('--reveal-order', String(index % 6));
+        });
+
+        if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+            revealNodes.forEach(node => node.classList.add('revealed'));
+            return;
+        }
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('revealed');
+                obs.unobserve(entry.target);
+            });
+        }, { threshold: 0.12 });
+
+        revealNodes.forEach(node => observer.observe(node));
+    }
 
     /* ================== HAMBURGER MENU LOGIC ================== */
     const hamburger = document.getElementById("hamburger");
@@ -221,6 +318,12 @@ document.addEventListener("DOMContentLoaded", function () {
     /* ================== INDUSTRIES INLINE ================== */
     (function () {
         const industryCards = document.querySelectorAll('.industry-card');
+        const modal = document.getElementById('industryModal');
+        const modalBody = document.getElementById('industryModalBody');
+        const modalTitle = document.getElementById('industryModalTitle');
+        const modalClose = document.getElementById('industryModalClose');
+        const modalDismiss = document.getElementById('industryModalDismiss');
+        const modalContact = document.getElementById('industryModalContact');
 
         const industryData = {
             fintech: {
@@ -270,64 +373,80 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         };
 
-        function closeAllInline() {
-            document.querySelectorAll('.inline-body').forEach(body => {
-                body.classList.remove("open");
-                body.setAttribute("aria-hidden", "true");
-            });
+        function closeIndustryModal() {
+            if (!modal) return;
+            modal.classList.remove('is-open');
+            modal.setAttribute('aria-hidden', 'true');
+        }
+
+        function openIndustryModal(key) {
+            if (!modal || !modalBody || !modalTitle) return;
+            const info = industryData[key];
+            if (!info) return;
+
+            modalTitle.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+            modalBody.innerHTML = `
+                <p class="leading-relaxed"><strong class="text-[var(--cyan)]">Problem:</strong> ${info.problem}</p>
+                <div>
+                    <p class="mb-2 font-semibold text-white"><strong class="text-[var(--cyan)]">Solutions:</strong></p>
+                    <ul class="list-disc pl-6 space-y-2 text-slate-300">
+                        ${info.solutions.map(s => `<li class="leading-relaxed">${s}</li>`).join('')}
+                    </ul>
+                </div>
+                <p class="leading-relaxed"><strong class="text-[var(--cyan)]">Impact:</strong> ${info.impact}</p>
+            `;
+
+            modal.classList.add('is-open');
+            modal.setAttribute('aria-hidden', 'false');
         }
 
         industryCards.forEach(card => {
             const key = card.dataset.key;
-            const inline = card.querySelector('.inline-body');
-            if (!key || !inline) return;
+            if (!key) return;
 
             card.addEventListener('click', (e) => {
-                if (e.target.closest('.inline-body') && !e.target.classList.contains('inline-close')) return;
-
-                const isOpen = inline.classList.contains("open");
-
-                if (isOpen) {
-                    inline.classList.remove("open");
-                    inline.setAttribute("aria-hidden", "true");
-                    return;
-                }
-
-                const info = industryData[key];
-                if (!info) return;
-
-                inline.innerHTML = `
-                    <div class="space-y-5 py-6 border-t border-white/10 mt-4 animate-fadeIn">
-                        <p class="text-white leading-relaxed"><strong class="text-[var(--cyan)] font-bold">Problem:</strong> ${info.problem}</p>
-                        <div>
-                            <p class="text-white mb-3 font-semibold"><strong class="text-[var(--cyan)]">Solutions:</strong></p>
-                            <ul class="list-disc pl-6 space-y-2 text-slate-300">
-                                ${info.solutions.map(s => `<li class="leading-relaxed">${s}</li>`).join('')}
-                            </ul>
-                        </div>
-                        <p class="text-white leading-relaxed"><strong class="text-[var(--cyan)] font-bold">Impact:</strong> ${info.impact}</p>
-                        <div class="flex flex-wrap gap-4 pt-4">
-                            <button class="inline-contact px-6 py-3 bg-gradient-to-r from-[var(--cyan)] to-[var(--blue)] text-white font-bold rounded-xl transition-all transform hover:-translate-y-1 shadow-lg\">Request Proposal</button>\n                            <button class="inline-close px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all\">Close</button>\n                        </div>\n                    </div>\n                `;
-
-                closeAllInline();
-                inline.classList.add("open");
-                inline.setAttribute("aria-hidden", "false");
-
-                inline.querySelector(".inline-contact").addEventListener("click", (e) => {
-                    e.stopPropagation();
-                    const contactBtn = document.querySelector('[data-target="contact"]');
-                    if (contactBtn) contactBtn.click();
-                });
-
-                inline.querySelector(".inline-close").addEventListener("click", (e) => {
-                    e.stopPropagation();
-                    inline.classList.remove("open");
-                });
+                e.preventDefault();
+                openIndustryModal(key);
             });
+
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openIndustryModal(key);
+                }
+            });
+        });
+
+        if (modalClose) modalClose.addEventListener('click', closeIndustryModal);
+        if (modalDismiss) modalDismiss.addEventListener('click', closeIndustryModal);
+
+        if (modalContact) {
+            modalContact.addEventListener('click', () => {
+                closeIndustryModal();
+                const contactBtn = document.querySelector('[data-target="contact"]');
+                if (contactBtn) contactBtn.click();
+            });
+        }
+
+        if (modal) {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeIndustryModal();
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeIndustryModal();
         });
     })();
 
     /* ================== PAGE NAVIGATION ================== */
+    function setActiveNav(pageId) {
+        document.querySelectorAll('.nav-link').forEach(btn => {
+            const isActive = btn.getAttribute('data-target') === pageId;
+            btn.classList.toggle('is-active', isActive);
+        });
+    }
+
     function showPage(pageId) {
         document.querySelectorAll('.page').forEach(page => {
             page.classList.remove('active');
@@ -338,6 +457,9 @@ document.addEventListener("DOMContentLoaded", function () {
             targetPage.classList.add('active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        setActiveNav(pageId);
+        if (pageId === 'home') animateCounters();
 
         if (mobileMenu) {
             mobileMenu.classList.remove('is-open');
@@ -356,6 +478,25 @@ document.addEventListener("DOMContentLoaded", function () {
             showPage(target);
         });
     });
+
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+        });
+
+        const toggleBackToTop = () => {
+            backToTop.classList.toggle('show', window.scrollY > 360);
+        };
+
+        window.addEventListener('scroll', toggleBackToTop, { passive: true });
+        toggleBackToTop();
+    }
+
+    initTypewriter();
+    initRevealObserver();
+    setActiveNav('home');
+    animateCounters();
 
     console.log("✓ All titan systems online");
 });
